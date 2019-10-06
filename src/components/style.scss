@@ -1,29 +1,94 @@
 // Importing variables
-@import './variables.scss';
+@import "./variables.scss";
 
 // Importing Bulma from node_modules
-@import '~bulma/bulma.sass';
+@import "~bulma/bulma.sass";
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+.navbar {
+  font-family: "Rubik", sans-serif;
+  padding-top: 3em;
+  img {
+    max-height: 2rem;
+  }
+  a {
+    font-size: 0.8rem;
+    padding: 0;
+    padding: 1rem;
+  }
+  .button.is-medium {
+    width: 144px;
+    height: 48px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+  }
+  .button.is-inverted {
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.11);
+    margin-left: 2rem;
+  }
+}
+
+// Header
+.header-social-links {
+  position: absolute;
+  z-index: 9999;
+  right: 3.5rem;
+  top: 0.3rem;
+  display: flex;
+  align-items: center;
+  p {
+    display: inline-block;
+    font-size: 0.7rem;
+  }
+  a {
+    display: inline-block;
+    &:hover {
+      background: transparent;
+    }
+  }
+}
 
 .gradientBg {
-	display: flex;
-	background: linear-gradient(to right, $primary-color, $secondary-color);
+  display: flex;
+  //   background: linear-gradient(to right, $primary-color, $secondary-color);
+  // background: linear-gradient(
+  //   210.03deg,
+  //   #98c221 -38.15%,
+  //   rgba(33, 194, 146, 0) 74.1%
+  // );
+  background-image: url(../images/headerbg.png);
+}
+.first-overlay {
+  display: flex;
+  position: relative;
+  top: -8em;
+}
+.second-overlay {
+  display: flex;
+  background: linear-gradient(
+    210.03deg,
+    #98c221 -38.15%,
+    rgba(33, 194, 146, 0) 74.1%
+  );
 }
 
 .center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
-	display: flex;
-	padding: 1.5rem 1.5rem;
-	line-height: 1.5rem;
-	a {
-		border-bottom: 1px solid;
-		color: black;
-	}
-	a:hover {
-		color: $secondary-color;
-	}
+  display: flex;
+  padding: 1.5rem 1.5rem;
+  line-height: 1.5rem;
+  a {
+    border-bottom: 1px solid;
+    color: black;
+  }
+  a:hover {
+    color: $secondary-color;
+  }
 }
