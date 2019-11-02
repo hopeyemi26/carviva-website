@@ -5,10 +5,14 @@
 @import "~bulma/bulma.sass";
 
 // Google Fonts
-@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap");
 
+/*  
+    NavBar
+*/
 .navbar {
   font-family: "Rubik", sans-serif;
+  font-weight: 500;
   padding-top: 3em;
   img {
     max-height: 2rem;
@@ -27,6 +31,61 @@
   .button.is-inverted {
     box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.11);
     margin-left: 2rem;
+  }
+}
+.footer.has-background-primary {
+  padding-top: 10rem;
+  .has-background-white {
+    border: 1px solid rgba(22, 43, 70, 0.05);
+    box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+  }
+  p {
+    span {
+      margin-top: 1rem;
+    }
+  }
+}
+.footer.has-background-black {
+  img {
+    height: 1.92rem;
+  }
+  a {
+    display: inline-block;
+    color: #fff;
+    border-bottom: none !important;
+    text-transform: uppercase;
+    font-size: 0.63rem;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    span {
+      font-size: 0.68rem;
+      color: #fff;
+    }
+    a {
+      // padding-top: 0.35rem;
+    }
+  }
+}
+
+.download-app {
+  a {
+    padding: 0;
+    &:first-child {
+      padding-right: 0.2rem;
+    }
+    &:hover {
+      background: transparent !important;
+    }
+    img {
+      height: 2rem;
+    }
   }
 }
 
@@ -50,16 +109,6 @@
   }
 }
 
-.gradientBg {
-  display: flex;
-  //   background: linear-gradient(to right, $primary-color, $secondary-color);
-  // background: linear-gradient(
-  //   210.03deg,
-  //   #98c221 -38.15%,
-  //   rgba(33, 194, 146, 0) 74.1%
-  // );
-  background-image: url(../images/headerbg.png);
-}
 .first-overlay {
   display: flex;
   position: relative;
@@ -90,5 +139,212 @@
   }
   a:hover {
     color: $secondary-color;
+  }
+}
+
+.become-partner {
+  background: #ffffff;
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 2.7rem;
+  .input {
+    background: #f3f4f6;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.4);
+    padding-left: 1rem;
+    padding: 1.45rem;
+  }
+  ::placeholder {
+    color: #000;
+    opacity: 0.4;
+  }
+  p {
+    color: #333333;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .button.is-link {
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.11);
+    border: none;
+    width: 144px;
+    height: 48px;
+  }
+  .control {
+    display: flex;
+    align-items: center;
+    span {
+      color: #333333;
+      font-size: 0.8rem;
+    }
+    a {
+      font-size: 0.8rem;
+    }
+    a:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+/* 
+  HomePage
+*/
+.body {
+  background: #0a1829 url(../images/body-bg.png) no-repeat;
+  background-size: contain;
+}
+.home-header {
+  background: transparent url(../images/headerbg.png) no-repeat;
+  background-size: contain;
+  height: 774px;
+}
+.hero-body {
+  h1.title {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+  }
+  p.subtitle {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+  }
+  .phone-holder {
+    img {
+      width: 99%;
+    }
+  }
+}
+.home-midsection {
+  .hanger-logo {
+    margin-top: -18.2%;
+    img {
+      width: 6%;
+      margin-bottom: 5%;
+    }
+    h2 {
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+    }
+    p {
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+    }
+  }
+  .icon-nav {
+    margin-top: 1rem;
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      position: relative;
+      .box {
+        background: rgba(18, 35, 57, 0.35);
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 3px;
+        border: 1px solid #162b46;
+        margin-bottom: 0.5rem;
+        img {
+          display: inline-block;
+        }
+      }
+      span {
+        display: block;
+        text-transform: uppercase;
+        color: #122339;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        font-size: 0.5rem;
+      }
+      &:hover {
+        top: -0.3rem;
+        .box {
+          // background: #ff9b3f;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 156, 63, 1) 0%,
+            rgba(241, 75, 53, 1) 100%
+          );
+          box-shadow: 0px 5px 9px rgba(241, 75, 53, 0.19);
+        }
+        span {
+          color: #fff;
+        }
+      }
+    }
+    .line {
+      display: block;
+      width: 30%;
+      height: 1px;
+      background: #162b46;
+      margin: 4rem auto;
+    }
+  }
+  .how-it-works {
+    margin-top: 5rem;
+    h3.title {
+      margin-bottom: 5rem;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: 47px;
+      line-height: 79px;
+    }
+    img {
+      width: 80%;
+    }
+    .summary {
+      padding-left: 2rem;
+      h3 {
+        font-family: "Rubik", sans-serif;
+        font-weight: 700;
+        font-size: 104px;
+        margin: 0;
+        letter-spacing: -0.03em;
+      }
+      h4 {
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 0;
+        margin: 0.4rem 0rem;
+        // text-transform: capitalize;
+      }
+      p {
+        font-family: "Rubik", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+.why-join {
+  background: #f9fffb url(../images/body-dnw-bg.png) no-repeat;
+  background-position: top center;
+  background-size: cover;
+  margin-top: -20rem;
+  padding-top: 40rem;
+  // position: relative;
+  h2.title {
+    font-family: "Rubik", sans-serif;
+    font-size: 47px;
+  }
+  .stats {
+    box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(22, 43, 70, 0.05);
+    padding: 1rem;
+    border-radius: 16px;
+    position: absolute;
+    top: -15rem;
+    left: 15%;
+    p {
+      font-family: "Rubik", sans-serif;
+      font-size: 70px;
+      font-weight: 700;
+      span {
+        display: block;
+        font-weight: 500;
+        color: #4f4f4f;
+        font-size: 24px;
+      }
+    }
   }
 }

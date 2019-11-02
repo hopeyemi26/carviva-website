@@ -1,66 +1,100 @@
-import React from 'react';
-import { FaTwitter, FaGithub, FaMedium } from 'react-icons/fa';
-import { StaticQuery, graphql } from 'gatsby';
-import './style.scss';
-import Emoji from './emoji';
+import React from "react";
+import { FaTwitter, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import { StaticQuery, graphql } from "gatsby";
+
+import "./style.scss";
+import logo from "../images/logo.png";
+import appStoreBadge from "../images/app-store-badge.png";
+import playStoreBadge from "../images/google-play-badge.png";
 
 const Footer = () => (
-	<StaticQuery
-		query={graphql`
-			query SocialQuery {
-				site {
-					siteMetadata {
-						gatsby
-						bulma
-						twitter
-						medium
-						github
-					}
-				}
-			}
-		`}
-		render={data => (
-			<footer className="footer center has-background-light">
-				<div className="content has-text-centered">
-					<p className="is-size-4">
-						This website was handcrafted with plenty cups of{' '}
-						<Emoji emoji="☕" />
-					</p>
-					<p className="is-size-4">
-						By Aman Mittal (@amahimself) using{' '}
-						<a href={data.site.siteMetadata.gatsby}>Gatsby</a> +{' '}
-						<a href={data.site.siteMetadata.bulma}>Bulma</a>
-					</p>
-					<article className="media center">
-						<span className="icon">
-							<a href={data.site.siteMetadata.twitter}>
-								<FaTwitter size="fa-2x" color="blue" />
-							</a>
-						</span>
-						&nbsp;
-						<span className="icon">
-							<a href={data.site.siteMetadata.github}>
-								<FaGithub size="fa-2x" color="black" />
-							</a>
-						</span>
-						&nbsp;
-						<span className="icon">
-							<a href={data.site.siteMetadata.medium}>
-								<FaMedium size="fa-2x" color="green" />
-							</a>
-						</span>
-						&nbsp;
-					</article>
-					&nbsp;
-					<p className="is-size-5">
-						You can also back or support this project for me to keep it updated
-						by{' '}
-						<a href="https://www.paypal.me/amanhimself/2">Buying Me a Coffee</a>
-					</p>
-				</div>
-			</footer>
-		)}
-	/>
+  <StaticQuery
+    query={graphql`
+      query SocialQuery {
+        site {
+          siteMetadata {
+            twitter
+            facebook
+            instagram
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <footer className="footer has-background-primary is-relative">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-three-fifths is-offset-one-fifth has-text-centered has-background-white"></div>
+            </div>
+            <div className="columns">
+              <div className="column is-half is-offset-one-quarter has-text-centered">
+                <p className="title is-5 has-text-white">
+                  Download Carviva to get started
+                  <span className="is-block download-app">
+                    <a href="/" className="button is-text">
+                      <img src={appStoreBadge} alt="appstore" />
+                    </a>
+                    <a href="/" className="button is-text">
+                      <img src={playStoreBadge} alt="appstore" />
+                    </a>
+                  </span>
+                </p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <footer className="footer has-background-black">
+          <div className="container">
+            <div class="columns">
+              <div class="column is-one-fifth">
+                <img src={logo} alt="logo" />
+              </div>
+              <div class="column">
+                <a href="/" className="navbar-item has-text-white">
+                  how it works
+                </a>
+                <a href="/" className="navbar-item has-text-white">
+                  autocare partners
+                </a>
+                <a href="/" className="navbar-item has-text-white">
+                  Faq
+                </a>
+                <a href="/" className="navbar-item has-text-white">
+                  terms and conditions
+                </a>
+                <a href="/" className="navbar-item has-text-white">
+                  contact us
+                </a>
+              </div>
+              <div class="column social is-one-quarter">
+                <span>Connect on Social Media</span>
+                <a
+                  href={data.site.siteMetadata.facebook}
+                  className="button is-text"
+                >
+                  <FaFacebookSquare color="#fff" size={16} />
+                </a>
+                <a
+                  href={data.site.siteMetadata.instagram}
+                  className="button is-text"
+                >
+                  <FaInstagram color="#fff" size={16} />
+                </a>
+                <a
+                  href={data.site.siteMetadata.twitter}
+                  className="button is-text"
+                >
+                  <FaTwitter color="#fff" size={16} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </>
+    )}
+  />
 );
 
 export default Footer;

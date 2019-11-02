@@ -1,139 +1,169 @@
-import React from 'react';
-import {
-	FaSass,
-	FaHtml5,
-	FaReact,
-	FaMobileAlt,
-	FaRocket,
-	FaOsi
-} from 'react-icons/fa';
+import React from "react";
+import "./style.scss";
+import hangerLogo from "../images/hanger_logo.png";
+import fuelIcon from "../images/fuel-icon.png";
+import image1 from "../images/homepage_image1.png";
+import image2 from "../images/homepage_image2.png";
+import image3 from "../images/homepage_image3.png";
+import howItWorks1 from "../images/how-it-works-1.png";
+import howItWorks2 from "../images/how-it-works-2.png";
+import howItWorks3 from "../images/how-it-works-3.png";
 
-import './style.scss';
-import Emoji from './emoji';
+// import FuelIcon from "../images/fuel.svg";
 
 const Midsection = () => (
-	<div>
-		<section className="section">
-			<div className="container">
-				<div className="columns is-multiline">
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaSass size="fa-2x" color="#d22780" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Uses Bulma</h1>
-									<p className="subtitle is-size-5">
-										Bulma is an open source CSS framework and used by more than
-										100,000 developers.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaHtml5 size="fa-2x" className="has-text-danger" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">JAMStack Solution</h1>
-									<p className="subtitle is-size-5">
-										It’s a new way of building websites and apps that delivers
-										better performance, higher security, lower cost of scaling,
-										and a better developer experience.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaReact size="fa-2x" color="#5e227f" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Gatsby + React?</h1>
-									<p className="subtitle is-size-5">
-										Uses Gatsby's version <code>v2</code>, enjoy the power of
-										the latest web technologies. All set up and waiting for you
-										to start building.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaMobileAlt size="fa-2x" color="blue" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Responsive Design</h1>
-									<p className="subtitle is-size-5">
-										Bulma is based on the Flexbox model and built with Sass. The
-										simplest grid system Just add columns, they will resize
-										themselves, like this website.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
+  <div>
+    <div className="home-midsection">
+      <div className="container">
+        <div className="columns hanger-logo">
+          <div className="column is-half is-offset-one-quarter has-text-centered">
+            <img src={hangerLogo} alt="logo" />
+            <h2 className="title has-text-primary is-spaced is-family-sans-serif">
+              Make your car go the extra mile
+            </h2>
+            <p className="subtitle has-text-white">
+              CarViva is a platform that connects car users and car owners to a
+              wide network of modern OEM workshops, garages and autocare service
+              providers across Nigeria.
+            </p>
+          </div>
+        </div>
 
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaOsi size="fa-2x" className="has-text-primary" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Open Source</h1>
-									<p className="subtitle is-size-5">
-										This starter kit is MIT Licensed. Need I say more?
-										<Emoji emoji="🤑" />
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaRocket size="fa-2x" className="has-text-danger" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Starter Kit</h1>
-									<p className="subtitle is-size-5">
-										This starter kit is target to developers who are looking
-										forward to use Bulma along with GatsbyJS. You can read more
-										in the <a href="https://gatsbyjs.org">documentation</a> on
-										how to get started.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+        <div className="columns">
+          <div className="column is-10 icon-nav is-offset-1 has-text-centered">
+            <button className="">
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+                {/* <FuelIcon /> */}
+              </div>
+              <span>buy fuel</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>oil change</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>car wash</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>wheels</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>repairs</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>diagnosis</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>towing</span>
+            </button>
+            <button>
+              <div className="box">
+                <img src={fuelIcon} alt="icon" />
+              </div>
+              <span>paint car</span>
+            </button>
+            <div className="line"></div>
+          </div>
+        </div>
+
+        <div className="columns">
+          <div className="column">
+            <img src={image1} alt="image" />
+          </div>
+          <div className="column">
+            <img src={image2} alt="image" />
+          </div>
+          <div className="column">
+            <img src={image3} alt="image" />
+          </div>
+        </div>
+
+        <div className="how-it-works has-text-centered">
+          <h3 className="title has-text-primary is-3">How it works</h3>
+          <div className="columns">
+            <div className="column">
+              <img src={howItWorks1} alt="How it works" />
+              <div className="summary has-text-left">
+                <h3 className="title is-1 has-text-primary">01.</h3>
+                <h4 className="subtitle has-text-white">Request Autocare</h4>
+                <p className="has-text-white">
+                  Tap service icons and select car make/model to search for
+                  service centers near you.
+                </p>
+              </div>
+            </div>
+            <div className="column">
+              <img src={howItWorks2} alt="How it works" />
+              <div className="summary has-text-left">
+                <h3 className="title is-1 has-text-primary">02.</h3>
+                <h4 className="subtitle has-text-white">Book and Visit</h4>
+                <p className="has-text-white">
+                  Pick a service center nearby with best price.Tap ‘Book Now’ to
+                  visit service center location.
+                </p>
+              </div>
+            </div>
+            <div className="column">
+              <img src={howItWorks3} alt="How it works" />
+              <div className="summary has-text-left">
+                <h3 className="title is-1 has-text-primary">03.</h3>
+                <h4 className="subtitle has-text-white">Enjoy Expert Care</h4>
+                <p className="has-text-white">
+                  Provide booking details at service center, pay cash or with
+                  card and rate provider on job completion
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="why-join">
+        <div className="container">
+          <div className="columns">
+            <div className="column has-text-centered">
+              <h2 className="title has-text-primary">Why join Carviva</h2>
+
+              <div className="stats columns has-background-white">
+                <div className="column">
+                  <p className="has-text-primary is-inline-block">
+                    100+ <span>Service Centers</span>
+                  </p>
+                </div>
+                <div className="column">
+                  <p className="has-text-primary is-inline-block">
+                    20 <span>Lagos Zones live on Carviva</span>
+                  </p>
+                </div>
+                <div className="column">
+                  <p className="has-text-primary is-inline-block">
+                    1000+ <span>Downloads by Users</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 export default Midsection;
