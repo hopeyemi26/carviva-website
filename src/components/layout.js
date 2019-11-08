@@ -3,15 +3,15 @@ import React from "react";
 import "./style.scss";
 import Helmet from "./helmet";
 import Header from "./header";
-import Midsection from "./midsection";
+import HomeMidSection from "./home";
 import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <div className="body">
     <Helmet />
     <Header />
-    <Midsection />
-    {/* <Footer /> */}
+    <HomeMidSection />
+    <Footer />
   </div>
 );
 

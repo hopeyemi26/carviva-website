@@ -13,13 +13,28 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        // precachePages: [`/about-us/`, `/projects/*`],
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // See below to configure properly
+        }
+      }
+    },
     "gatsby-transformer-sharp",
+    "gatsby-plugin-smoothscroll",
     "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
@@ -30,7 +45,7 @@ module.exports = {
         background_color: "#2980b9",
         theme_color: "#2980b9",
         display: "standalone",
-        icon: "src/images/gatsby-icon.png",
+        // icon: "src/images/gatsby-icon.png",
         orientation: "portrait"
       }
     },

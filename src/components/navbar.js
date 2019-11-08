@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookSquare, FaInstagram, FaTwitter } from "react-icons/fa";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import "./style.scss";
 import logo from "../images/logo.png";
@@ -46,10 +47,13 @@ const Navbar = () => (
             <a href="/" className="navbar-item has-text-white">
               Home
             </a>
-            <a href="/" className="navbar-item has-text-white">
+            <a
+              className="navbar-item has-text-white"
+              onClick={() => scrollTo("#how-it-works")}
+            >
               How it works
             </a>
-            <a href="/" className="navbar-item has-text-white">
+            <a href="partners" className="navbar-item has-text-white">
               Autocare partners
             </a>
             <a href="/" className="navbar-item has-text-white">

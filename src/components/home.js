@@ -22,7 +22,7 @@ import DiagnosisIcon from "../assets/diagnosis-icon.svg";
 import TowingIcon from "../assets/towing-icon.svg";
 import PaintIcon from "../assets/paint-icon.svg";
 
-const Midsection = () => (
+const HomeMidSection = () => (
   <div className="home-midsection">
     <div className="first-section">
       <div className="container">
@@ -213,4 +213,4 @@ const Midsection = () => (
   </div>
 );
 
-export default Midsection;
+export default HomeMidSection;

@@ -4,8 +4,10 @@ import { StaticQuery, graphql } from "gatsby";
 
 import "./style.scss";
 import logo from "../images/logo.png";
-import appStoreBadge from "../images/app-store-badge.png";
-import playStoreBadge from "../images/google-play-badge.png";
+import appStoreBadge from "../images/app-store.png";
+import playStoreBadge from "../images/play-store.png";
+import carOwner from "../images/footer_car_owner.png";
+import partner from "../images/footer_partner.png";
 
 const Footer = () => (
   <StaticQuery
@@ -21,11 +23,37 @@ const Footer = () => (
       }
     `}
     render={data => (
-      <>
-        <footer className="footer has-background-primary is-relative">
+      <footer className="footer is-relative">
+        <div className="get-started is-relative">
+          <h2 className="title">GET STARTED</h2>
+        </div>
+        <div className="has-background-primary is-relative">
           <div className="container">
             <div className="columns">
-              <div className="column is-three-fifths is-offset-one-fifth has-text-centered has-background-white"></div>
+              <div className="column is-three-fifths is-offset-one-fifth has-text-centered has-background-white">
+                <div className="columns">
+                  <div className="column">
+                    <img src={carOwner} alt="Car Owner" />
+                    <div className="info">
+                      <h4 className="has-text-primary">Car Owner</h4>
+                      <p>Sign up to start using Carviva.</p>
+                      <button className="has-background-primary has-text-white">
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <img src={partner} alt="Partner" />
+                    <div className="info">
+                      <h4 className="has-text-primary">Autocare Partners</h4>
+                      <p>Get on the service providers network on Carviva.</p>
+                      <button className="has-background-white has-text-primary">
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="columns">
               <div className="column is-half is-offset-one-quarter has-text-centered">
@@ -35,7 +63,11 @@ const Footer = () => (
                     <a href="/" className="button is-text">
                       <img src={appStoreBadge} alt="appstore" />
                     </a>
-                    <a href="/" className="button is-text">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.carviva.mobile"
+                      target="_blank"
+                      className="button is-text"
+                    >
                       <img src={playStoreBadge} alt="appstore" />
                     </a>
                   </span>
@@ -44,8 +76,8 @@ const Footer = () => (
               </div>
             </div>
           </div>
-        </footer>
-        <footer className="footer has-background-black">
+        </div>
+        <div className="has-background-black">
           <div className="container">
             <div class="columns">
               <div class="column is-one-fifth">
@@ -63,6 +95,9 @@ const Footer = () => (
                 </a>
                 <a href="/" className="navbar-item has-text-white">
                   terms and conditions
+                </a>
+                <a href="/" className="navbar-item has-text-white">
+                  about us
                 </a>
                 <a href="/" className="navbar-item has-text-white">
                   contact us
@@ -91,8 +126,8 @@ const Footer = () => (
               </div>
             </div>
           </div>
-        </footer>
-      </>
+        </div>
+      </footer>
     )}
   />
 );
