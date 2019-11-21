@@ -1,5 +1,7 @@
 import React from "react";
 import ReactSwipe from "react-swipe";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import hangerLogo from "../../images/hanger_logo.png";
 import image1 from "../../images/homepage_image1.png";
@@ -44,54 +46,79 @@ const HomeMidSection = () => {
 
           <div className="columns">
             <div className="column has-text-centered is-hidden-desktop">
-              <div className="boxx">
-                <div className="holder">
-                  <FuelIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>buy fuel</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <OilChangeIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>CHANGE OIL</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <CarWashIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>car wash</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <WheelsIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>wheels</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <RepairsIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>repairs</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <DiagnosisIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>diagnosis</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <TowingIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>towing</p>
-              </div>
-              <div className="boxx">
-                <div className="holder">
-                  <PaintIcon color="#fff" size="1.5rem" />
-                </div>
-                <p>paint car</p>
-              </div>
+              <CarouselProvider
+                visibleSlides={3}
+                totalSlides={8}
+                naturalSlideWidth={400}
+                naturalSlideHeight={400}
+              >
+                <Slider>
+                  <Slide index={0}>
+                    <div className="boxx">
+                      <div className="holder fuel">
+                        <FuelIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>buy fuel</p>
+                    </div>
+                  </Slide>
+                  <Slide index={1}>
+                    <div className="boxx">
+                      <div className="holder oil">
+                        <OilChangeIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>CHANGE OIL</p>
+                    </div>
+                  </Slide>
+                  <Slide index={2}>
+                    <div className="boxx">
+                      <div className="holder wash">
+                        <CarWashIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>car wash</p>
+                    </div>
+                  </Slide>
+                  <Slide index={3}>
+                    <div className="boxx">
+                      <div className="holder wheel">
+                        <WheelsIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>wheels</p>
+                    </div>
+                  </Slide>
+                  <Slide index={4}>
+                    <div className="boxx">
+                      <div className="holder repair">
+                        <RepairsIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>repairs</p>
+                    </div>
+                  </Slide>
+                  <Slide index={5}>
+                    <div className="boxx">
+                      <div className="holder diagnosis">
+                        <DiagnosisIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>diagnosis</p>
+                    </div>
+                  </Slide>
+                  <Slide index={6}>
+                    <div className="boxx">
+                      <div className="holder tow">
+                        <TowingIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>towing</p>
+                    </div>
+                  </Slide>
+                  <Slide index={7}>
+                    <div className="boxx">
+                      <div className="holder paint">
+                        <PaintIcon color="#fff" size="1.5rem" />
+                      </div>
+                      <p>paint car</p>
+                    </div>
+                  </Slide>
+                </Slider>
+              </CarouselProvider>
             </div>
             <div className="column is-10 icon-nav is-offset-1 has-text-centered is-hidden-touch">
               <button>

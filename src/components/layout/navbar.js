@@ -141,7 +141,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/" className="btn-login">
-                Home
+                Login
               </Link>
             </li>
           </ul>

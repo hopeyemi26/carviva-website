@@ -814,7 +814,7 @@
   height: 80%;
   background: #ffffff;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0px !important;
 }
 .ReactModal__Overlay--after-open {
   opacity: 1;
@@ -823,47 +823,58 @@
   opacity: 0;
 }
 .modal-wrapper {
-  padding-top: 3rem;
-  .btn {
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 0.5rem;
-    cursor: pointer;
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-  }
-  h4 {
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 3rem;
-    span {
-      font-weight: 300;
-      font-size: 13px;
-      color: #4f4f4f;
-      margin-top: 0.3rem;
+  .modal_header {
+    position: sticky;
+    width: inherit;
+    top: 0;
+    background: #fff;
+    height: 13vh;
+    padding-top: 1.2rem;
+    z-index: 100;
+    .btn {
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 0.5rem;
+      cursor: pointer;
+      position: absolute;
+      right: 2rem;
+      top: 1rem;
+    }
+    h4 {
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 3rem;
+      span {
+        font-weight: 300;
+        font-size: 13px;
+        color: #4f4f4f;
+        margin-top: 0.3rem;
+      }
     }
   }
   .modal-text {
     height: 100%;
     max-height: 100%;
     border-radius: 8px;
-    // border: 1px solid #ebebeb;
-    // padding: 1rem;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     h5 {
       font-family: "Rubik", sans-serif;
       font-weight: 400;
       font-size: 15px;
-      margin: 0.3rem 0rem;
+      margin: 0.3rem 0rem 0.8rem;
       color: #000;
     }
     p {
       font-family: "Rubik", sans-serif;
       font-weight: 300;
       font-size: 14px;
+      margin-bottom: 0.8rem;
+      span {
+        font-weight: 400;
+        padding-right: 0.3rem;
+      }
     }
   }
   .modal-nav {
@@ -1005,68 +1016,56 @@
 }
 
 .carousel {
-  margin-top: 6rem;
+  // margin-top: 6rem;
+  margin-top: 2rem;
+}
+.slideHorizontal___1NzNV {
+  margin-right: -2rem;
 }
 .boxx {
   display: inline-block;
   width: 80px;
   margin: 0.6rem;
-  &:nth-child(1) {
-    .holder {
-      background: linear-gradient(
-        to bottom,
-        rgba(71, 139, 246, 1) 0%,
-        rgba(49, 118, 227, 1) 100%
-      );
-    }
+  .holder.fuel {
+    background: linear-gradient(
+      to bottom,
+      rgba(71, 139, 246, 1) 0%,
+      rgba(49, 118, 227, 1) 100%
+    );
   }
-  &:nth-child(2) {
-    .holder {
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 156, 63, 1) 0%,
-        rgba(241, 75, 53, 1) 100%
-      );
-    }
+  .holder.oil {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 156, 63, 1) 0%,
+      rgba(241, 75, 53, 1) 100%
+    );
   }
-  &:nth-child(3) {
-    .holder {
-      background: linear-gradient(
-        to bottom,
-        rgba(247, 191, 5, 1) 0%,
-        rgba(228, 150, 0, 1) 100%
-      );
-    }
+  .holder.wash {
+    background: linear-gradient(
+      to bottom,
+      rgba(247, 191, 5, 1) 0%,
+      rgba(228, 150, 0, 1) 100%
+    );
   }
-
-  &:nth-child(4) {
-    .holder {
-      background: linear-gradient(to bottom, #34ac52 0%, #148c32 100%);
-    }
+  .holder.wheel {
+    background: linear-gradient(to bottom, #34ac52 0%, #148c32 100%);
   }
-  &:nth-child(5) {
-    .holder {
-      background: linear-gradient(to bottom, #f77d1d 0%, #dc3905 100%);
-    }
+  .holder.repair {
+    background: linear-gradient(to bottom, #f77d1d 0%, #dc3905 100%);
   }
-  &:nth-child(6) {
-    .holder {
-      background: linear-gradient(to bottom, #f739a1 0%, #e5245e 100%);
-    }
+  .holder.diagnosis {
+    background: linear-gradient(to bottom, #f739a1 0%, #e5245e 100%);
   }
-  &:nth-child(7) {
-    .holder {
-      background: linear-gradient(to bottom, #a643eb 0%, #7d20be 100%);
-    }
+  .holder.tow {
+    background: linear-gradient(to bottom, #a643eb 0%, #7d20be 100%);
   }
-  &:nth-child(8) {
-    .holder {
-      background: linear-gradient(to bottom, #20c6e0 0%, #1a89da 100%);
-    }
+  .holder.paint {
+    background: linear-gradient(to bottom, #20c6e0 0%, #1a89da 100%);
   }
   .holder {
     width: 80px;
     height: 80px;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;

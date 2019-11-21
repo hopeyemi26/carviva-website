@@ -121,13 +121,13 @@ const PartnerForm = props => {
                   <input
                     className="input is-medium is-static"
                     type="text"
-                    placeholder="City"
-                    value={props.city}
-                    name="city"
+                    placeholder="Zone (Ikeja, Surulere, Ikoyi etc)"
+                    value={props.zone}
+                    name="zone"
                     ref={register({ required: true })}
                   />
                 </p>
-                {errors.city && <span>This field is required</span>}
+                {errors.zone && <span>This field is required</span>}
               </div>
               <div className="field is-medium">
                 <p className="control is-expanded">
@@ -145,28 +145,32 @@ const PartnerForm = props => {
             </div>
           </div>
           <p>
-            By proceeding, I agree to Carviva's{" "}
-            <a
-              href="/"
-              className="has-text-primary"
-              onClick={e => {
-                e.preventDefault();
-                setModal(true);
-              }}
-            >
-              Terms of Use
-            </a>{" "}
+            By Signing up, I agree to Carviva's{" "}
+            <strong>
+              <a
+                href="/"
+                className="has-text-primary"
+                onClick={e => {
+                  e.preventDefault();
+                  setModal(true);
+                }}
+              >
+                Terms of Use
+              </a>
+            </strong>{" "}
             & acknowledge that I have read the{" "}
-            <a
-              href="/"
-              className="has-text-primary"
-              onClick={e => {
-                e.preventDefault();
-                setModal(true);
-              }}
-            >
-              Privacy Policy
-            </a>
+            <strong>
+              <a
+                href="/"
+                className="has-text-primary"
+                onClick={e => {
+                  e.preventDefault();
+                  setModal(true);
+                }}
+              >
+                Privacy Policy
+              </a>
+            </strong>
             .
           </p>
           <div

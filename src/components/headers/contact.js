@@ -1,6 +1,22 @@
 import React from "react";
+import GoogleMapReact from "google-map-react";
 import Navbar from "../layout/navbar";
 import contactImage from "../../images/contact-map.png";
+
+const ReactMapComponent = ({ text }) => (
+  <div
+    style={{
+      color: "white",
+      background: "grey",
+      display: "inline-flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center"
+    }}
+  >
+    {text}
+  </div>
+);
 
 const ContactHeader = () => (
   <section className="hero home-header is-fullheight-with-navbar">
@@ -22,8 +38,21 @@ const ContactHeader = () => (
               </p>
             </div>
           </div>
-          <div className="column phone-holder">
-            <img src={contactImage} alt="Maps" />
+          <div className="column phone-holder" style={{ height: "402px" }}>
+            {/* <img src={contactImage} alt="Maps" /> */}
+            <GoogleMapReact
+              bootstrapURLKeys={{
+                key: "AIzaSyCWhYZKXyWvBHf01TzjI5OnnwXajZAKtWQ"
+              }}
+              defaultCenter={{ lat: 6.6195948, lng: 3.3653967 }}
+              defaultZoom={11}
+            >
+              <ReactMapComponent
+                lat={6.6195948}
+                lng={3.3653967}
+                text="CarViva"
+              />
+            </GoogleMapReact>
           </div>
         </div>
       </div>

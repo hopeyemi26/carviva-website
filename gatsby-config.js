@@ -3,13 +3,14 @@ module.exports = {
     title: "Carviva",
     author: "Dayo Akinkuowo",
     imageUrl: "https://i.imgur.com/Vz81GEl.png",
-    description: "A Project to bootstrap your next Gatsby + Bulma site.",
-    keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
+    description:
+      "Carviva - your one-stop shop for all your auto care services.",
+    keywords: `Carviva, auto care, workshop, auto servicing`,
     twitter: "https://twitter.com/mycarviva",
     facebook: `https://facebook.com/mycarviva`,
     instagram: `https://instagram.com/mycarviva`,
     linkedIn: `https://www.linkedin.com/company/mycarviva`,
-    siteUrl: `https://www.mycarviva.com`
+    siteUrl: `https://mycarviva.com`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
