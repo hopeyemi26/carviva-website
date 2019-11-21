@@ -1,14 +1,17 @@
 import React from "react";
-import Helmet from "../components/helmet";
-import Header from "../components/headers/partners";
-import Footer from "../components/footer";
+import "../components/style.scss";
+import Helmet from "../components/layout/helmet";
+import PartnersHeader from "../components/headers/partners";
+import PartnersMidSection from "../components/contents/partners";
+import Footer from "../components/layout/footer";
 
-const Partners = () => (
+const PartnersPage = () => (
   <div className="partners">
     <Helmet />
-    <Header />
+    <PartnersHeader />
+    <PartnersMidSection />
     <Footer />
   </div>
 );
 
-export default Partners;
+export default PartnersPage;

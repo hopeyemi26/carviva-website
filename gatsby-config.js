@@ -5,10 +5,11 @@ module.exports = {
     imageUrl: "https://i.imgur.com/Vz81GEl.png",
     description: "A Project to bootstrap your next Gatsby + Bulma site.",
     keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
-    twitter: "https://twitter.com/carviva",
-    facebook: `https://facebook.com/carviva`,
-    instagram: `https://instagram.com/carviva`,
-    siteUrl: `https://www.carviva.com.ng`
+    twitter: "https://twitter.com/mycarviva",
+    facebook: `https://facebook.com/mycarviva`,
+    instagram: `https://instagram.com/mycarviva`,
+    linkedIn: `https://www.linkedin.com/company/mycarviva`,
+    siteUrl: `https://www.mycarviva.com`
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -26,6 +27,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "tomato",
+        showSpinner: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -39,11 +47,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Makefolio",
-        short_name: "Makefolio",
+        name: "CarViva",
+        short_name: "carviva",
         start_url: "/",
-        background_color: "#2980b9",
-        theme_color: "#2980b9",
+        background_color: "#21c292",
+        theme_color: "#21c292",
         display: "standalone",
         // icon: "src/images/gatsby-icon.png",
         orientation: "portrait"

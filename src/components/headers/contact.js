@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../layout/navbar";
-import PartnerForm from "../partnerform";
+import contactImage from "../../images/contact-map.png";
 
-const PartnersHeader = () => (
+const ContactHeader = () => (
   <section className="hero home-header is-fullheight-with-navbar">
     <Navbar />
     <div className="hero-body">
@@ -11,17 +11,19 @@ const PartnersHeader = () => (
           <div className="column is-three-fifths">
             <div className="intro">
               <h1 className="title has-text-white is-2">
-                Grow your Numbers <br />
-                with Carviva
+                Got questions?
+                <br />
+                Contact Us
               </h1>
               <p className="subtitle has-text-white is-5 is-spaced">
-                Tap into a large community of car owners <br /> to make more
-                money for your service <br /> centre.
+                We aim to be everywhere! <br />
+                Just tap a button to get quick autocare <br /> near you at best
+                prices.
               </p>
             </div>
           </div>
           <div className="column phone-holder">
-            <PartnerForm />
+            <img src={contactImage} alt="Maps" />
           </div>
         </div>
       </div>
@@ -29,4 +31,4 @@ const PartnersHeader = () => (
   </section>
 );
 
-export default PartnersHeader;
+export default ContactHeader;

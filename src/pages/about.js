@@ -1,5 +1,17 @@
 import React from "react";
+import "../components/style.scss";
+import Helmet from "../components/layout/helmet";
+import AboutHeader from "../components/headers/about";
+import AboutMidSection from "../components/contents/about";
+import Footer from "../components/layout/footer";
 
-const About = () => <h2>Welcome to About page</h2>;
+const AboutPage = () => (
+  <div className="about">
+    <Helmet />
+    <AboutHeader />
+    <AboutMidSection />
+    <Footer />
+  </div>
+);
 
-export default About;
+export default AboutPage;

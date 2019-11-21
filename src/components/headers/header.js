@@ -1,11 +1,9 @@
 import React from "react";
 
-import phonePlaceholder from "../images/phone.png";
-import appStoreBadge from "../images/app-store.png";
-import playStoreBadge from "../images/play-store.png";
-import Navbar from "../navbar";
-
-import "./style.scss";
+import phonePlaceholder from "../../images/phone.png";
+import appStoreBadge from "../../images/app-store.png";
+import playStoreBadge from "../../images/play-store.png";
+import Navbar from "../layout/navbar";
 
 const Header = ({ siteTitle }) => (
   <section className="hero home-header is-fullheight-with-navbar">
@@ -27,6 +25,7 @@ const Header = ({ siteTitle }) => (
                 <a
                   href="https://play.google.com/store/apps/details?id=com.carviva.mobile"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="button is-text"
                 >
                   <img src={appStoreBadge} alt="appstore" />
@@ -34,6 +33,7 @@ const Header = ({ siteTitle }) => (
                 <a
                   href="https://play.google.com/store/apps/details?id=com.carviva.mobile"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="button is-text"
                 >
                   <img src={playStoreBadge} alt="appstore" />
@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => (
             </div>
           </div>
           <div className="column phone-holder">
-            <figure class="image">
+            <figure className="image">
               <img src={phonePlaceholder} alt="phone" />
             </figure>
           </div>
