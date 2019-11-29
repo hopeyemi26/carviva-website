@@ -15,9 +15,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-plugin-offline`,
+      resolve: "gatsby-plugin-offline",
       options: {
-        // precachePages: [`/about-us/`, `/projects/*`],
+        precachePages: ["/*"]
       }
     },
     {
@@ -54,7 +54,7 @@ module.exports = {
         background_color: "#21c292",
         theme_color: "#21c292",
         display: "standalone",
-        // icon: "src/images/gatsby-icon.png",
+        icon: "src/images/favicon.png",
         orientation: "portrait"
       }
     },

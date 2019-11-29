@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
               </p>
               <span className="is-block download-app">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.carviva.mobile"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button is-text"

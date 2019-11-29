@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import {
   FaTwitter,
   FaInstagram,
@@ -70,7 +70,10 @@ const Footer = () => {
                           <p>
                             Get on the service providers network on Carviva.
                           </p>
-                          <button className="has-background-white has-text-primary">
+                          <button
+                            onClick={() => navigate("/partners/")}
+                            className="has-background-white has-text-primary"
+                          >
                             Get Started
                           </button>
                         </div>
@@ -124,7 +127,7 @@ const Footer = () => {
                     >
                       Autocare partners
                     </Link>
-                    <Link to="/faq" className="navbar-item has-text-white">
+                    <Link to="#" className="navbar-item has-text-white">
                       Faq
                     </Link>
                     <a

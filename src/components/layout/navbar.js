@@ -103,12 +103,12 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="navbar-item">
-                <Link
-                  to="/"
+                <a
+                  href="http://partners.mycarviva.com/"
                   className="button is-white is-outlined is-medium has-text-weight-semibold"
                 >
                   Login
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -140,9 +140,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" className="btn-login">
+              <a href="http://partner.mycarviva.com/" className="btn-login">
                 Login
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
