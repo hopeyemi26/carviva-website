@@ -104,7 +104,7 @@ const Navbar = () => {
               </div>
               <div className="navbar-item">
                 <a
-                  href="http://partners.mycarviva.com/"
+                  href="https://sp.mycarviva.com/"
                   className="button is-white is-outlined is-medium has-text-weight-semibold"
                 >
                   Login
@@ -140,7 +140,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href="http://partner.mycarviva.com/" className="btn-login">
+              <a href="https://sp.mycarviva.com/" className="btn-login">
                 Login
               </a>
             </li>

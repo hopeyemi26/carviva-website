@@ -13,9 +13,11 @@ const Faq = ({ questions, title }) => {
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h3 className="title has-text-primary has-text-centered">
-              {title}
-            </h3>
+            {title && (
+              <h3 className="title has-text-primary has-text-centered">
+                {title}
+              </h3>
+            )}
             <div className="faqs">
               {questions.map(question => (
                 <div className="faq" key={question.id}>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactSwipe from "react-swipe";
 import Modal from "react-modal";
+import scrollTo from "gatsby-plugin-smoothscroll";
 import Faq from "../faq";
 import ModalVehicleReq from "../contents/modalVehicleReq";
 import ModalPartnerReq from "../contents/modalPartnerReq";
@@ -202,7 +203,7 @@ const PartnersMidSection = () => {
                         business name and valid mobile phone number to signup on
                         our partner network.
                       </p>
-                      <a href="/" className="has-text-primary">
+                      <a href="#signup" className="has-text-primary">
                         Sign up online
                       </a>
                     </div>

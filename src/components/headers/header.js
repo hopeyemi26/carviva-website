@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => (
               </span>
             </div>
           </div>
-          <div className="column phone-holder">
+          <div className="column phone-holder" id="signup">
             <figure className="image">
               <img src={phonePlaceholder} alt="phone" />
             </figure>

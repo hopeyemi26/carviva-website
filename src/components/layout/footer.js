@@ -7,7 +7,8 @@ import {
   FaLinkedin
 } from "react-icons/fa";
 import Modal from "react-modal";
-import ModalFAQ from "../contents/modalFaq";
+import ModalTerms from "../contents/modalTerms";
+import ModalFaq from "../contents/modalFaq";
 import { StaticQuery, graphql } from "gatsby";
 import logo from "../../images/logo.png";
 import appStoreBadge from "../../images/app-store.png";
@@ -17,6 +18,7 @@ import partner from "../../images/footer_partner.png";
 
 const Footer = () => {
   const [modal, setModal] = useState(false);
+  const [faqModal, setFaqModal] = useState(false);
 
   return (
     <StaticQuery
@@ -38,9 +40,17 @@ const Footer = () => {
             ariaHideApp={false}
             isOpen={modal}
             onRequestClose={() => setModal(false)}
+            contentLabel="Terms and Conditions"
+          >
+            <ModalTerms onclose={() => setModal(false)} />
+          </Modal>
+          <Modal
+            ariaHideApp={false}
+            isOpen={faqModal}
+            onRequestClose={() => setFaqModal(false)}
             contentLabel="Frequently Asked Questions"
           >
-            <ModalFAQ onclose={() => setModal(false)} />
+            <ModalFaq onclose={() => setFaqModal(false)} />
           </Modal>
           <footer className="footer is-relative">
             <div className="get-started is-relative">
@@ -112,7 +122,9 @@ const Footer = () => {
               <div className="container">
                 <div className="columns">
                   <div className="column is-one-fifth">
-                    <img src={logo} alt="logo" />
+                    <Link to="/">
+                      <img src={logo} alt="logo" />
+                    </Link>
                   </div>
                   <div className="column">
                     <a
@@ -127,11 +139,16 @@ const Footer = () => {
                     >
                       Autocare partners
                     </Link>
-                    <Link to="#" className="navbar-item has-text-white">
+                    <Link
+                      onClick={e => {
+                        e.preventDefault();
+                        setFaqModal(true);
+                      }}
+                      className="navbar-item has-text-white"
+                    >
                       Faq
                     </Link>
                     <a
-                      href="#"
                       onClick={e => {
                         e.preventDefault();
                         setModal(true);
