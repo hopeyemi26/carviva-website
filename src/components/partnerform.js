@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useForm from "react-hook-form";
 import BeatLoader from "react-spinners/BeatLoader";
 import Modal from "react-modal";
-import ModalFAQ from "./contents/modalFaq";
+import ModaTerms from "./contents/modalTerms";
 
 const PartnerForm = props => {
   const { register, handleSubmit, errors } = useForm();
@@ -20,9 +20,9 @@ const PartnerForm = props => {
         ariaHideApp={false}
         isOpen={modal}
         onRequestClose={() => setModal(false)}
-        contentLabel="Frequently Asked Questions"
+        contentLabel="Terms and Conditions"
       >
-        <ModalFAQ onclose={() => setModal(false)} />
+        <ModaTerms onclose={() => setModal(false)} />
       </Modal>
       <div className="become-partner">
         <p className="title is-4 has-text-primary">
@@ -205,7 +205,7 @@ const PartnerForm = props => {
             <div className="control">
               <span>Already have an account? </span>
               <a
-                href="/"
+                href="https://sp.mycarviva.com/"
                 className="button has-text-primary has-text-weight-semibold"
               >
                 Sign in
@@ -226,7 +226,7 @@ const PartnerForm = props => {
             <div className="control" style={{ marginTop: "1rem" }}>
               <span>Already have an account? </span>
               <a
-                href="/"
+                href="https://sp.mycarviva.com/"
                 className="button has-text-primary has-text-weight-semibold"
               >
                 Sign in
