@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { navigate } from "gatsby";
 
 const VerifyAccount = ({ location }) => {
   const status = location.search;
-  if (status === "") {
-    navigate("/");
-  } else {
-    setTimeout(() => {
+  useEffect(() => {
+    if (status === "") {
       navigate("/");
-    }, 3000);
-  }
+    } else {
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    }
+  });
 
   return (
     <div className="verify-page">
