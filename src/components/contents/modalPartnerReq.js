@@ -1,6 +1,5 @@
 import React from "react";
 import { IoIosClose } from "react-icons/io";
-import vehicleReq from "../../images/ve-req.jpeg";
 
 const modalPartnerReq = ({ onclose }) => (
   <div className="modal-wrapper is-relative">

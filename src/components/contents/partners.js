@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactSwipe from "react-swipe";
 import Modal from "react-modal";
-import scrollTo from "gatsby-plugin-smoothscroll";
 import Faq from "../faq";
 import questions from "../../partners.json";
 import ModalVehicleReq from "../contents/modalVehicleReq";
@@ -157,6 +156,7 @@ const PartnersMidSection = () => {
                         to let you know what is needed to join in Nigeria.
                       </p>
                       <a
+                        href=""
                         onClick={() => setPartner(true)}
                         className="has-text-primary"
                       >
@@ -174,6 +174,7 @@ const PartnersMidSection = () => {
                         benefit more.
                       </p>
                       <a
+                        href=""
                         onClick={() => setModal(true)}
                         className="has-text-primary"
                       >

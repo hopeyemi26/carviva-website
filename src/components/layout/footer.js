@@ -139,7 +139,7 @@ const Footer = () => {
                     >
                       Autocare partners
                     </Link>
-                    <Link
+                    <a
                       onClick={e => {
                         e.preventDefault();
                         setFaqModal(true);
@@ -147,7 +147,7 @@ const Footer = () => {
                       className="navbar-item has-text-white"
                     >
                       Faq
-                    </Link>
+                    </a>
                     <a
                       onClick={e => {
                         e.preventDefault();

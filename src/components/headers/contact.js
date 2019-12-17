@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import Navbar from "../layout/navbar";
-import contactImage from "../../images/contact-map.png";
+// import contactImage from "../../images/contact-map.png";
 
 const ReactMapComponent = ({ text }) => (
   <div
