@@ -7,7 +7,7 @@ import {
   FaLinkedin
 } from "react-icons/fa";
 import Modal from "react-modal";
-import ModalTerms from "../contents/modalTerms";
+import ModalAppTerms from "../contents/modalAppTerms";
 import ModalFaq from "../contents/modalFaq";
 import { StaticQuery, graphql } from "gatsby";
 import logo from "../../images/logo.png";
@@ -42,7 +42,7 @@ const Footer = () => {
             onRequestClose={() => setModal(false)}
             contentLabel="Terms and Conditions"
           >
-            <ModalTerms onclose={() => setModal(false)} />
+            <ModalAppTerms onclose={() => setModal(false)} />
           </Modal>
           <Modal
             ariaHideApp={false}

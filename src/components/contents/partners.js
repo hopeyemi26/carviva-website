@@ -156,8 +156,11 @@ const PartnersMidSection = () => {
                         to let you know what is needed to join in Nigeria.
                       </p>
                       <a
-                        href=""
-                        onClick={() => setPartner(true)}
+                        href="/"
+                        onClick={e => {
+                          e.preventDefault();
+                          setPartner(true);
+                        }}
                         className="has-text-primary"
                       >
                         See Requirements
@@ -174,8 +177,11 @@ const PartnersMidSection = () => {
                         benefit more.
                       </p>
                       <a
-                        href=""
-                        onClick={() => setModal(true)}
+                        href="/"
+                        onClick={e => {
+                          e.preventDefault();
+                          setModal(true);
+                        }}
                         className="has-text-primary"
                       >
                         Vehicle requirements
